@@ -49,13 +49,13 @@ def AttackablePlaces(SizeOfChessboard, QueenPosition, ObstaclesPositions):
            if(ro < rq):
                while(i >= 0 and j < SizeOfChessboard):
                    CBMatrix[i][j] = 0
-                   i= i-1
-                   j= j+1
+                   i = i-1
+                   j = j+1
            else:
                 while(i < SizeOfChessboard and j >=0):
                    CBMatrix[i][j] = 0
-                   i=i+1
-                   j=j-1
+                   i = i+1
+                   j = j-1
 
         # Case of diagonal obstacles in direction up or down left
         if(ro - co == rq - cq):
@@ -64,13 +64,13 @@ def AttackablePlaces(SizeOfChessboard, QueenPosition, ObstaclesPositions):
            if(ro < rq):
                while(i >= 0 and j>=0 ):
                    CBMatrix[i][j] = 0
-                   i=i-1
-                   j=j-1
+                   i = i-1
+                   j = j-1
            else:
                 while(i < SizeOfChessboard and j < SizeOfChessboard):
                    CBMatrix[i][j] = 0
-                   i=i+1
-                   j=j+1
+                   i = i+1
+                   j = j+1
 
     # Number of attackable fields is the sum of nonzero elements of CBMatrix
     # Queen's position was treated as attackable position, so it is needed to subtrack 1
